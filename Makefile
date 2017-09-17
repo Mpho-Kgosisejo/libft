@@ -6,7 +6,7 @@
 #    By: mkgosise <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/05/31 15:02:02 by mkgosise          #+#    #+#              #
-#    Updated: 2017/07/17 13:48:45 by mkgosise         ###   ########.fr        #
+#    Updated: 2017/09/17 02:21:51 by mkgosise         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -38,14 +38,14 @@ FLAGS = -Wall\
 all: $(NAME)
 
 $(NAME):
-	gcc -c $(FLAGS) $(SRC)
-	ar rc $(NAME) $(OBJ)
-	ranlib $(NAME)
+	@gcc -c $(FLAGS) $(SRC)
+	@ar rc $(NAME) $(OBJ)
+	@ranlib $(NAME)
 
 clean:
-	rm -f $(OBJ)
+	@rm -f $(OBJ)
 
 fclean: clean
-	rm -f $(NAME)
+	@rm -f $(NAME)
 
 re: fclean all
